@@ -9,7 +9,7 @@ What you'll need for this demo
 - 1 terminal window
 - 2 browser windows
 - The IP address of your docker machine
-    - On linux this is (probably) localhost/127.0.01
+    - On linux this is (probably) localhost/127.0.0.1
     - On Windows/Mac this is the IP address of your docker machine
         - [See here](https://docs.docker.com/machine/get-started/)
 
@@ -35,7 +35,7 @@ docker-compose scale web_app=4
 Refresh the browser window @ http://$DOCKERIP:8989/stats a few times. 
 Notice the other hosts coming up.
 
-Refresh the browser window (without cache) @ http://127.0.01:8080 a few times.
+Refresh the browser window (without cache) @ http://$DOCKERIP:8080 a few times.
 Notice that we are now receiving responses from all the hosts (in a round-robin fashion)
 
 In the terminal:
@@ -46,7 +46,7 @@ docker-compose scale web_app=0
 Refresh the browser window @ http://$DOCKERIP:8989/stats a few times. 
 Notice all the hosts going down.
 
-Refresh the browser window (without cache) @ http://127.0.01:8080 a few times.
+Refresh the browser window (without cache) @ http://$DOCKERIP:8080 a few times.
 Now we get a 503
 
 In the terminal:
@@ -57,7 +57,7 @@ docker-compose scale web_app=2
 Refresh the browser window @ http://$DOCKERIP:8989/stats a few times. 
 Two hosts should come online
 
-Refresh the browser window (without cache) @ http://127.0.01:8080 a few times.
+Refresh the browser window (without cache) @ http://$DOCKERIP:8080 a few times.
 We now go back and forth between those two hosts
 
 In the terminal:
@@ -68,7 +68,7 @@ docker-compose scale loadbalancer=0
 Refresh the browser window @ http://$DOCKERIP:8989/stats a few times. 
 Notice nothing is there
 
-Refresh the browser window (without cache) @ http://127.0.01:8080 a few times.
+Refresh the browser window (without cache) @ http://$DOCKERIP:8080 a few times.
 Nothing here either
 
 If you'd like navigate to to the port the application binds to, 8910.
@@ -89,7 +89,7 @@ docker-compose scale loadbalancer=1
 Refresh the browser window @ http://$DOCKERIP:8989/stats a few times. 
 A new load balancer is back online, and has picked up where the other left off.
 
-Refresh the browser window (without cache) @ http://127.0.01:8080 a few times.
+Refresh the browser window (without cache) @ http://$DOCKERIP:8080 a few times.
 Two of our hosts are once again accessible.
 
 In the terminal:
