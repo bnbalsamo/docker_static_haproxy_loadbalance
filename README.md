@@ -1,3 +1,12 @@
+# ARCHIVED
+
+This repository is archived. I am no longer actively developing/supporting it.
+
+If you are interested in discussing the contents of this repository feel free to contact me
+via the contact details provided in the "Author" section below.
+
+---
+
 ATTN: Docker swarm is probably a better/cleaner/more automated fit for most load balancing tasks utilizing docker. If you are not positive that docker swarm doesn't fit your use case, please check it out before attempting the following in a production environment.
 
 This repository contains a demo of running a load balanced web application on a single host utilizing docker containers.
@@ -105,3 +114,7 @@ docker-compose down
 ```
 
 Our whole web application stack is cleanly shutdown and removed.
+
+# Author
+
+Brian Balsamo <Brian@BrianBalsamo.com>
